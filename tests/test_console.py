@@ -94,7 +94,7 @@ class TestHBNBCommand_help(unittest.TestCase):
              "     a given attribute key/value pair or dictionary.")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help update"))
-            self.assertEqual(h, output.getvalue().strip())
+            self.assertEqual(h.strip(), getvalue.strip())
 
     def test_help(self):
         h = ("Documented commands (type help <topic>):\n"
